@@ -10,12 +10,19 @@
 import ProductsComp from './components/ProductsComp'
 import CartComp from './components/CartComp'
 import CurrencyComp from './components/CurrencyComp'
+import { mapActions } from 'vuex'
 export default {
     name: 'App',
     components: {
         ProductsComp,
         CartComp,
         CurrencyComp,
+    },
+    methods: {
+        ...mapActions(['loadingProducts']),
+    },
+    created() {
+        this.loadingProducts()
     },
 }
 </script>

@@ -2,7 +2,7 @@
     <div>
         <h2>Product List</h2>
         <div class="products__list">
-            <div v-for="(product, ind) in getProducts" :key="ind" class="product">
+            <div v-for="product in getProducts" :key="product.id" class="product">
                 <span>{{ product.name }}</span>
                 <div class="product__price-buy">
                     <span>{{ product.price }} </span>
